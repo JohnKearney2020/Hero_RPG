@@ -269,7 +269,7 @@ def main():
             print(f'1.) fight the {monster.char_class}')
             print('2.) do nothing')
             print('3.) flee')
-            print('4.) Use an item in your inventory to aid you.')
+            #print('4.) Use an item in your inventory to aid you.')
             print('> ', end=' ')
 
             store_chosen = False #used to keep the monster from attacking the player if they choose to go to the store
@@ -292,40 +292,41 @@ def main():
                         print('- You nearly tripped, be careful!...')
                     elif i == 10:
                         print(f'- You hear no signs of the {monster.char_class} anymore. Phew! You made it...')
-                        time.sleep(3)
+                        print('-------------------------------------------------')
+                        time.sleep(2)
                     else:
                         print('-')
                     
                 #print("Goodbye.")
                 break
-            elif raw_input == '4':
-                store_chosen = True
-                print('-------------------------------------------------')
-                print('               List of Store Items')
-                print('-------------------------------------------------')
-                print(f'1.) {SuperTonic.name} -- {SuperTonic.description} -- Cost: {SuperTonic.cost} -- # in stock: {SuperTonic.inventory}')
-                print(f'2.) {Armor.name} -- {Armor.description} -- Cost: {Armor.cost} -- # in stock: {Armor.inventory}')
-                print(f'3.) {Evade.name} -- {Evade.description} -- Cost: {Evade.cost} -- # in stock: {Evade.inventory}')
-                print(f'4.) {CritPotion.name} -- {CritPotion.description} -- Cost: {CritPotion.cost} -- # in stock: {CritPotion.inventory}')
-                print(f'5.) {CritHealPotion.name} -- {CritHealPotion.description} -- Cost: {CritHealPotion.cost} -- # in stock: {CritHealPotion.inventory}')
-                print(f'6.) Go Back')
-                print()
-                store_choice = int(input('What would you like to buy?: '))
-                while store_choice != 6:
-                    # if store_choice == 1:
-                    #     hero.health += 10
-                    #     print(f'You now have {hero.health} health.')
-                    # elif store_choice == 2:
+            # elif raw_input == '4':
+            #     store_chosen = True
+            #     print('-------------------------------------------------')
+            #     print('               List of Store Items')
+            #     print('-------------------------------------------------')
+            #     print(f'1.) {SuperTonic.name} -- {SuperTonic.description} -- Cost: {SuperTonic.cost} -- # in stock: {SuperTonic.inventory}')
+            #     print(f'2.) {Armor.name} -- {Armor.description} -- Cost: {Armor.cost} -- # in stock: {Armor.inventory}')
+            #     print(f'3.) {Evade.name} -- {Evade.description} -- Cost: {Evade.cost} -- # in stock: {Evade.inventory}')
+            #     print(f'4.) {CritPotion.name} -- {CritPotion.description} -- Cost: {CritPotion.cost} -- # in stock: {CritPotion.inventory}')
+            #     print(f'5.) {CritHealPotion.name} -- {CritHealPotion.description} -- Cost: {CritHealPotion.cost} -- # in stock: {CritHealPotion.inventory}')
+            #     print(f'6.) Go Back')
+            #     print()
+            #     store_choice = int(input('What would you like to buy?: '))
+            #     while store_choice != 6:
+            #         # if store_choice == 1:
+            #         #     hero.health += 10
+            #         #     print(f'You now have {hero.health} health.')
+            #         # elif store_choice == 2:
                     
-                    # elif store_choice == 3:
+            #         # elif store_choice == 3:
                     
-                    # elif store_choice == 4:
+            #         # elif store_choice == 4:
                     
-                    # elif store_choice == 5:
+            #         # elif store_choice == 5:
 
                     
 
-                    store_choice = int(input('What would you like to buy?: '))
+            #         store_choice = int(input('What would you like to buy?: '))
             else:
                 print(f'Invalid input {raw_input}')
 
